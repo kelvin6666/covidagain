@@ -218,7 +218,7 @@ def app():
     state_testingRate = pd.DataFrame(data =TestingRateList,columns=['State','Average Testing Rate per Day','Total Test Done','Total Infected'] )
     fig_state_testingRate = px.bar(state_testingRate.sort_values(by='Average Testing Rate per Day',ascending = True).reset_index().drop('index',axis=1)  , x='State', y='Average Testing Rate per Day', title="Testing Rate of each state")
 
-    move = pd.read_csv("Mysejahtera/checkin_malaysia.csv")
+    move = pd.read_csv("mysejahtera/checkin_malaysia.csv")
     
     ########## Python ############
 
