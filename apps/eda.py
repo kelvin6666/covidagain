@@ -41,7 +41,7 @@ def app():
     importCsv('vaxcination data',vaxcination_list )
 
     mysejahtera = [] #Declare list to store mysejahtera dataset
-    importCsv('Mysejahtera',mysejahtera)
+    importCsv('mysejahtera',mysejahtera)
 
     vax_msia = vaxcination_list[0]
     vax_state = vaxcination_list[1]
