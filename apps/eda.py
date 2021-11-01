@@ -25,8 +25,8 @@ import altair as alt
 
 def importCsv(name, listName): #function to import every csv in a folder
         dir_name = os.getcwd()
-        for file in os.listdir(dir_name + '\\'  +name):
-            df = pd.read_csv(dir_name + '\\'  + name +'\\' +file, error_bad_lines=False)
+        for file in os.listdir(dir_name + '/'  +name):
+            df = pd.read_csv(dir_name + '/'  + name +'/' +file, error_bad_lines=False)
             df.name = file
             listName.append(df)
 
