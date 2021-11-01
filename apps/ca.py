@@ -30,7 +30,7 @@ def importCsv(name, listName): #function to import every csv in a folder
 
 def app():
     ########## Python ############
-    move = pd.read_csv("Mysejahtera/checkin_malaysia.csv")
+    move = pd.read_csv("mysejahtera/checkin_malaysia.csv")
     pop = pd.read_csv('population.csv')
     epidemic_list = [] #declare list to store epidemic data
     importCsv('epidemic data',epidemic_list )
