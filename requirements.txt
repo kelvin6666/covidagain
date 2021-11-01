@@ -1,11 +1,8 @@
-Pillow
 streamlit
 numpy
 pandas
 altair
-folium
 datetime
-geopandas
 streamlit-folium
 plotly
 scikit-learn

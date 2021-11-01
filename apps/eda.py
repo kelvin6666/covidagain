@@ -27,6 +27,7 @@ def importCsv(name, listName): #function to import every csv in a folder
 
 
 def app():
+    
     ########## Python ############
     pop = pd.read_csv('population.csv')
     epidemic_list = [] #declare list to store epidemic data
