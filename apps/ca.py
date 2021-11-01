@@ -84,6 +84,8 @@ def app():
     cases_msia['date'] = pd.to_datetime(cases_msia['date'],errors='coerce')
     vax_cases = vax_msia.merge(cases_msia,how='inner',on='date')
     vax_cases['date'] = pd.to_datetime(vax_cases['date'],errors='coerce')
+
+    move = pd.read_csv("mysejahtera/checkin_malaysia.csv")
     ########## Python ############
     st.write(" ")
     st.markdown('### What clustering algorithm is suitable to find different clusters from the dataset? How do you quantify the risk?')
