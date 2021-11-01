@@ -13,7 +13,13 @@ from datetime import timedelta
 from dateutil.relativedelta import *
 from sklearn import preprocessing
 from scipy import sign
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import MinMaxScaler
 import plotly.graph_objects as go
+from sklearn.cluster import DBSCAN
+from sklearn.cluster import AgglomerativeClustering
+import scipy.cluster.hierarchy as sch
+import plotly.figure_factory as ff
 import calendar
 import altair as alt
 
@@ -27,7 +33,6 @@ def importCsv(name, listName): #function to import every csv in a folder
 
 
 def app():
-    
     ########## Python ############
     pop = pd.read_csv('population.csv')
     epidemic_list = [] #declare list to store epidemic data
