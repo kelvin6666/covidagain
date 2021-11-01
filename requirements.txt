@@ -8,3 +8,5 @@ datetime
 geopandas
 streamlit-folium
 plotly
+sklearn
+scipy
