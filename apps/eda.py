@@ -34,14 +34,55 @@ def importCsv(name, listName): #function to import every csv in a folder
 
 def app():
     ########## Python ############
+    
+
     pop = pd.read_csv('population.csv')
     epidemic_list = [] #declare list to store epidemic data
-    importCsv('epidemic data',epidemic_list )
+    cases_malaysia=pd.read_csv('epidemic data/cases_malaysia.csv')
+    epidemic_list.append(cases_malaysia)
+    cases_state=pd.read_csv('epidemic data/cases_state.csv')
+    epidemic_list.append(cases_state)
+
+    clusters=pd.read_csv('epidemic data/clusters.csv')
+    epidemic_list.append(clusters)
+
+    deaths_malaysia=pd.read_csv('epidemic data/deaths_malaysia.csv')
+    epidemic_list.append(deaths_malaysia)
+
+    deaths_state=pd.read_csv('epidemic data/deaths_state.csv')
+    epidemic_list.append(deaths_state)
+
+    hospital=pd.read_csv('epidemic data/hospital.csv')
+    epidemic_list.append(hospital)
+
+    icu=pd.read_csv('epidemic data/icu.csv')
+    epidemic_list.append(icu)
+
+    pkrc=pd.read_csv('epidemic data/pkrc.csv')
+    epidemic_list.append(pkrc)
+
+    tests_malaysia=pd.read_csv('epidemic data/tests_malaysia.csv')
+    epidemic_list.append(tests_malaysia)
+
+    tests_state=pd.read_csv('epidemic data/tests_state.csv')
+    epidemic_list.append(tests_state)
+
     vaxcination_list = [] #declare list to store vaccination dataset
-    importCsv('vaxcination data',vaxcination_list )
+    vax_malaysia = pd.read_csv('vaxcination data/vax_malaysia.csv')
+    vaxcination_list.append(vax_malaysia)
+    vax_state = pd.read_csv('vaxcination data/vax_state.csv')
+    vaxcination_list.append(vax_state)
+
 
     mysejahtera = [] #Declare list to store mysejahtera dataset
-    importCsv('mysejahtera',mysejahtera)
+    checkin_malaysia = pd.read_csv('mysejahtera/checkin_malaysia.csv')
+    mysejahtera.append(checkin_malaysia)
+    checkin_malaysia_time = pd.DataFrame()
+    mysejahtera.append(checkin_malaysia_time)
+    checkin_state = pd.read_csv('mysejahtera/checkin_state.csv')
+    mysejahtera.append(checkin_state)
+
+
 
     vax_msia = vaxcination_list[0]
     vax_state = vaxcination_list[1]
